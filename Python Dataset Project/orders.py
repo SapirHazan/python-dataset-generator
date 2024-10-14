@@ -25,15 +25,6 @@ def generate_orders(customers, products, product_categories, product_skus, retai
 
             orders.append({
                 'OrderDate': date, 'OrderID': order_id, 'CustomerID': customer['CustomerID'],
-                'Product': product, 'ProductCategory': product_categories[product],
-                'ProductSKU': product_skus[product], 'RetailPrice': round(retail_prices[year][product], 2),
-                'ProductionCost': round(production_costs[year][product], 2), 'Quantity': quantity
-            })
-
-            shipping_date = pd.to_datetime(date, dayfirst=True) + timedelta(days=random.randint(1, 10))
-            shipping_details.append({
-                'OrderID': order_id, 'ShippingDate': shipping_date.strftime('%d/%m/%Y'),
-                'ShippingFee': f'${shipping_fee}'
-            })
+                'Product': product, 'ProductCategory': product_categorie
 
     return orders, shipping_details

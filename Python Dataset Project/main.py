@@ -6,11 +6,7 @@ from save_to_excel import save_to_excel
 location_data = {
     'USA': [('New York', 'NY'), ('Los Angeles', 'CA')],
     'Canada': [('Toronto', 'Ontario'), ('Vancouver', 'British Columbia')],
-    'UK': [('London', 'England'), ('Manchester', 'England')],
-    'Germany': [('Berlin', 'Berlin'), ('Munich', 'Bavaria')],
-    'France': [('Paris', 'Île-de-France'), ('Lyon', 'Auvergne-Rhône-Alpes')],
-    'Australia': [('Sydney', 'New South Wales'), ('Melbourne', 'Victoria')]
-}
+    'UK': [('London', 'Eng
 
 base_shipping_fees = {'USA': 60, 'Canada': 45, 'UK': 40, 'Germany': 30, 'France': 20, 'Australia': 10}
 
@@ -24,3 +20,5 @@ orders, shipping_details = generate_orders(customers, products, product_categori
 save_to_excel(customers, orders, shipping_details)
 
 # File End
+
+# Hello world
