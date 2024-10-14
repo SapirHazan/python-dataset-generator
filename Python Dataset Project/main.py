@@ -22,3 +22,5 @@ orders, shipping_details = generate_orders(customers, products, product_categori
 
 # Save to Excel
 save_to_excel(customers, orders, shipping_details)
+
+# End
