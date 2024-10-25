@@ -1,29 +1,30 @@
-Python Dataset Project
-הפרויקט הזה מייצר סט נתונים של הזמנות לקוחות עם פרטי מוצרים, לקוחות ומשלוח, ושומר את הכל בקובץ אקסל המוכן לניתוח ב-Power BI.
+# Python Dataset Project
 
-📂 מבנה הפרויקט
-main.py
-הסקריפט הראשי שמריץ את כל תהליך יצירת הנתונים ושמירתם באקסל. מפעיל את הפונקציות מתוך customers.py, products.py, orders.py, ו-save_to_excel.py.
-פלט: קובץ אקסל עם מספר גיליונות.
+This project generates a dataset of customer orders with product, customer, and shipping details, saving everything in an Excel file prepared for analysis in **Power BI**.
 
-customers.py
-מייצר נתוני לקוחות: מזהה לקוח, שם, טלפון, כתובת, עיר, מדינה וארץ.
-משתמש בספרייה Faker כדי ליצור נתוני לקוחות אקראיים.
+## 📂 Project Structure
 
-products.py
-מגדיר מוצרים, קטגוריות, ו-SKU עבור כל מוצר.
-כולל את הפונקציה calculate_prices לקביעת מחירים לפי שנים, כולל מחיר ייצור ומחיר קמעונאי לכל מוצר.
+- **main.py**  
+  The main script that runs the entire data generation process and saves it in Excel. It calls functions from `customers.py`, `products.py`, `orders.py`, and `save_to_excel.py`.  
+  **Output**: An Excel file with multiple sheets.
 
-orders.py
-יוצר נתוני הזמנות עבור כל לקוח: תאריך הזמנה, מזהה הזמנה, סוג מוצר, מחיר, עלות ייצור, כמות ומחיר משלוח.
+- **customers.py**  
+  Generates customer data, including ID, name, phone number, address, city, state, and country.  
+  Uses the **Faker** library to create random customer data.
 
-save_to_excel.py
-שומר את כל הנתונים שנוצרו בקובץ אקסל עם גיליונות נפרדים ללקוחות, הזמנות ופרטי משלוח.
-מיקום ברירת מחדל: C:/Users/Matan/Desktop/Code/Python Dataset Project/PBI_Dataset.xlsx.
+- **products.py**  
+  Defines products, categories, and SKUs for each product.  
+  Includes the `calculate_prices` function to set prices per year, with both retail and production costs for each product.
 
-📦 התקנת חבילות נדרשות
-Faker: להפקת פרטי לקוחות
-pandas: לעיבוד ושמירה של הנתונים באקסל
-openpyxl: שמירה בפורמט אקסל
+- **orders.py**  
+  Creates order data for each customer: order date, order ID, product type, price, production cost, quantity, and shipping fee.
 
-הערה: אפשר לשנות את המיקום של הקובץ שנשמר בערך output_path ב-save_to_excel.py אם רוצים לשמור במקום אחר.
+- **save_to_excel.py**  
+  Saves all generated data into an Excel file with separate sheets for **Customers**, **Orders**, and **Shipping**.  
+  **Default Location**: `Documents/PBI_Dataset.xlsx`.
+
+## 📦 Required Packages
+
+- **Faker**: For generating customer data.
+- **pandas**: For processing and saving the data in Excel.
+- **openpyxl**: Required for saving data in Excel format.
